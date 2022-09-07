@@ -1,0 +1,104 @@
+<html>
+ <head>
+    <title>
+        Calculator With JavaScript
+    </title>
+    <style>
+        input[type="button"]{ 
+            padding: 10px;
+            border-radius: 5px;
+            background-color:seagreen;
+            color:black;
+            border-color:blueviolet;
+           font-size: 50px;
+           
+           
+        }
+
+        input[type="text"]
+        { 
+            border-radius: 5px;
+            background-color:black;
+            color:white;
+            text-align: right;
+            border-color: black;
+            
+        }
+        body{
+    background-image:url("bumblebee.jpg");
+    background-repeat:no-repeat;
+    background-size:1000 1900;
+    background-color: aquamarine;
+    background-position:auto;
+    
+        }
+        div{
+            text-align: center;
+            font-family:cursive;
+            font-size: xx-large ;
+             background-color:skyblue;
+              border:solid red 2px;
+              margin-top:15%;
+               margin-left: 70%;
+               opacity:0.7;
+        }
+
+
+    </style>
+ </head>
+ <body>
+        <br>
+    <div>
+        <br>
+        This is a Calculator
+        <br><br>
+
+    <input style="width: 230px;height: 50px;font-size:xx-large ;" type="text" id="result"/>
+    <br><br>
+    <input type="button" value="9" onClick="display('9')"/>
+    <input type="button" value="8" onClick="display('8')"/>
+    <input type="button" value="7" onClick="display('7')"/> 
+    <input type="button" value="/" onClick="display('/')"/>
+     <br><br>
+    <input type="button" value="6" onClick="display('6')"/> 
+    <input type="button" value="5" onClick="display('5')"/>
+    <input type="button" value="4" onClick="display('4')"/> 
+    <input type="button" value="*" onClick="display('*')"/>
+    <br><br>
+    <input type="button" value="3" onClick="display('3')"/> 
+    <input type="button" value="2" onClick="display('2')"/>
+    <input type="button" value="1" onClick="display('1')"/>
+    <input type="button" value="-" onClick="display('-')"/>
+    <br><br>
+    
+    <input style="background-color:brown; color:black;" type="button" value="C" onClick="clearScreen()"/>
+    <input type="button" value="=" onClick="calculate()"/>
+    <input type="button" value="+" onClick="display('+')"/>
+    <br><br>
+     </div>
+    
+     
+        
+    <script>
+       function calculate()
+            {
+                let x = document.getElementById('result').value;
+                 let y = eval(x);
+                 document.getElementById('result').value=y;
+                 return y;
+                 //console.log(calculate);
+               }
+
+           function display(val)
+           {
+            document.getElementById('result').value +=val;
+               return val;
+           }    
+           function clearScreen()
+           {
+            document.getElementById('result').value =''
+
+           }
+     </script>
+   </body>
+</html>
